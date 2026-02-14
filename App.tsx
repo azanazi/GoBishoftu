@@ -22,7 +22,7 @@ const App = () => {
             <Route path="packages" element={<Packages />} />
             <Route path="contact" element={<Contact />} />
           </Route>
-          {/* Admin route moved outside Layout to have its own clean interface */}
+          {/* Admin is now inside the Router context to prevent mapping errors */}
           <Route path="/admin" element={<Admin />} />
         </Routes>
       </Router>
