@@ -1,11 +1,11 @@
 
 import React, { useState } from 'react';
 import { Send, Instagram, CheckCircle, MessageSquare, Heart, Sparkles } from 'lucide-react';
-import Button from '../components/Button';
-import FadeIn from '../components/FadeIn';
-import { FeedbackService } from '../services/supabase';
-import { TELEGRAM_LINK, INSTAGRAM_LINK } from '../constants';
-import { useLanguage } from '../contexts/LanguageContext';
+import Button from '../components/Button.tsx';
+import FadeIn from '../components/FadeIn.tsx';
+import { FeedbackService } from '../services/supabase.ts';
+import { TELEGRAM_LINK, INSTAGRAM_LINK } from '../constants.ts';
+import { useLanguage } from '../contexts/LanguageContext.tsx';
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', message: '' });

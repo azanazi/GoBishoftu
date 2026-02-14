@@ -1,9 +1,9 @@
 
 import React, { useEffect, useState } from 'react';
-import { PackageService } from '../services/supabase';
-import { Package, ViewState } from '../types';
-import Button from '../components/Button';
-import FadeIn from '../components/FadeIn';
+import { PackageService } from '../services/supabase.ts';
+import { Package, ViewState } from '../types.ts';
+import Button from '../components/Button.tsx';
+import FadeIn from '../components/FadeIn.tsx';
 import { 
   X, 
   ArrowRight, 
@@ -20,8 +20,8 @@ import {
   Send,
   Star
 } from 'lucide-react';
-import { TELEGRAM_LINK, PLACEHOLDER_IMAGES } from '../constants';
-import { useLanguage } from '../contexts/LanguageContext';
+import { TELEGRAM_LINK, PLACEHOLDER_IMAGES } from '../constants.ts';
+import { useLanguage } from '../contexts/LanguageContext.tsx';
 
 const Packages = () => {
   const [packages, setPackages] = useState<Package[]>([]);

@@ -1,10 +1,10 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { PackageService } from '../services/supabase';
-import { Package } from '../types';
-import Button from '../components/Button';
-import { ADMIN_ACCESS_CODE, IS_DEMO_MODE } from '../constants';
+import { PackageService } from '../services/supabase.ts';
+import { Package } from '../types.ts';
+import Button from '../components/Button.tsx';
+import { ADMIN_ACCESS_CODE, IS_DEMO_MODE } from '../constants.ts';
 import { Trash2, Edit2, Plus, Lock, LogOut, X, Calendar, Clock, Upload, CheckCircle, Circle, ArrowLeft, Tag, Loader2, AlertTriangle } from 'lucide-react';
 
 const Admin = () => {

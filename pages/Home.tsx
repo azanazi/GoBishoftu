@@ -2,10 +2,10 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Star, ArrowRight, Cloud, Wind, Sun, Sparkles } from 'lucide-react';
-import Button from '../components/Button';
-import FadeIn from '../components/FadeIn';
-import { PLACEHOLDER_IMAGES } from '../constants';
-import { useLanguage } from '../contexts/LanguageContext';
+import Button from '../components/Button.tsx';
+import FadeIn from '../components/FadeIn.tsx';
+import { PLACEHOLDER_IMAGES } from '../constants.ts';
+import { useLanguage } from '../contexts/LanguageContext.tsx';
 
 const Home = () => {
   const [scrollY, setScrollY] = useState(0);

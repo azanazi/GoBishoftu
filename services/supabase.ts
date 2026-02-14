@@ -1,7 +1,7 @@
 
 import { createClient } from '@supabase/supabase-js';
-import { SUPABASE_URL, SUPABASE_ANON_KEY, IS_DEMO_MODE } from '../constants';
-import { Package, Feedback } from '../types';
+import { SUPABASE_URL, SUPABASE_ANON_KEY, IS_DEMO_MODE } from '../constants.ts';
+import { Package, Feedback } from '../types.ts';
 
 // Initialize Supabase only if keys are present
 export const supabase = !IS_DEMO_MODE 
@@ -117,8 +117,6 @@ export const PackageService = {
       return;
     }
     
-    // We use count: 'exact' to ensure we know if a row was actually deleted.
-    // RLS policies often silently fail (return no error but count 0).
     const { error, count } = await supabase!
       .from('packages')
       .delete({ count: 'exact' })
@@ -126,7 +124,6 @@ export const PackageService = {
     
     if (error) throw error;
     
-    // If no rows were deleted, it likely means the ID wasn't found OR permission was denied by RLS
     if (count === 0) {
        throw new Error("Deletion failed. This may be due to Row Level Security (RLS) policies blocking deletion, or the item does not exist.");
     }

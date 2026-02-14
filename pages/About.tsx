@@ -2,10 +2,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Check, X, ArrowRight } from 'lucide-react';
-import Button from '../components/Button';
-import FadeIn from '../components/FadeIn';
-import { PLACEHOLDER_IMAGES } from '../constants';
-import { useLanguage } from '../contexts/LanguageContext';
+import Button from '../components/Button.tsx';
+import FadeIn from '../components/FadeIn.tsx';
+import { PLACEHOLDER_IMAGES } from '../constants.ts';
+import { useLanguage } from '../contexts/LanguageContext.tsx';
 
 const About = () => {
   const { t } = useLanguage();

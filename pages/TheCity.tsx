@@ -2,10 +2,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Coffee, Wind, Users, Waves, Sun, Utensils, Car, Heart, BatteryCharging, CloudFog, ArrowRight } from 'lucide-react';
-import Button from '../components/Button';
-import FadeIn from '../components/FadeIn';
-import { PLACEHOLDER_IMAGES, CITY_HERO_IMAGES, WEEKEND_VIBES_IMAGE, LAKE_IMAGES } from '../constants';
-import { useLanguage } from '../contexts/LanguageContext';
+import Button from '../components/Button.tsx';
+import FadeIn from '../components/FadeIn.tsx';
+import { PLACEHOLDER_IMAGES, CITY_HERO_IMAGES, WEEKEND_VIBES_IMAGE, LAKE_IMAGES } from '../constants.ts';
+import { useLanguage } from '../contexts/LanguageContext.tsx';
 
 const TheCity = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -106,7 +106,7 @@ const TheCity = () => {
 
       {/* SECTION 3: THE LAKES (THE REAL STAR) - REDESIGNED */}
       <section className="py-24 px-4 bg-earth-100 rounded-[3rem] mx-2 md:mx-6 overflow-hidden relative">
-         {/* Background Decor remains similar for continuity */}
+         {/* Background Decor */}
          <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none">
             <div className="absolute top-20 left-20 w-64 h-64 bg-blue-200 rounded-full blur-[80px]"></div>
             <div className="absolute bottom-20 right-20 w-80 h-80 bg-nature-200 rounded-full blur-[80px]"></div>
