@@ -1,14 +1,14 @@
 
 import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout';
-import Home from './pages/Home';
-import About from './pages/About';
-import Packages from './pages/Packages';
-import Contact from './pages/Contact';
-import Admin from './pages/Admin';
-import TheCity from './pages/TheCity';
-import { LanguageProvider } from './contexts/LanguageContext';
+import Layout from './components/Layout.tsx';
+import Home from './pages/Home.tsx';
+import About from './pages/About.tsx';
+import Packages from './pages/Packages.tsx';
+import Contact from './pages/Contact.tsx';
+import Admin from './pages/Admin.tsx';
+import TheCity from './pages/TheCity.tsx';
+import { LanguageProvider } from './contexts/LanguageContext.tsx';
 
 const App = () => {
   return (

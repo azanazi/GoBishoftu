@@ -11,19 +11,13 @@ import {
   MapPin, 
   CheckCircle2, 
   Sparkles, 
-  Users, 
   Heart, 
   GraduationCap, 
   PartyPopper, 
   Coffee, 
   Compass,
   Clock,
-  MessageSquare,
-  DollarSign,
-  Camera,
-  Sun,
   Send,
-  Wrench,
   Star
 } from 'lucide-react';
 import { TELEGRAM_LINK, PLACEHOLDER_IMAGES } from '../constants';

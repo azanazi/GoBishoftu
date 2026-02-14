@@ -208,7 +208,7 @@ const Admin = () => {
             placeholder="••••"
           />
           <Button type="submit" fullWidth size="lg">Unlock</Button>
-          {IS_DEMO_MODE && <p className="mt-6 text-xs text-stone-400 font-bold uppercase tracking-widest">Demo Code: 1234</p>}
+          {IS_DEMO_MODE && <p className="mt-6 text-xs text-stone-400 font-bold uppercase tracking-widest">Demo Code: {ADMIN_ACCESS_CODE}</p>}
         </form>
         <Link to="/" className="mt-8 text-stone-400 font-bold text-sm hover:text-stone-600 flex items-center gap-2">
             <ArrowLeft size={16} /> Back to Home
@@ -261,7 +261,10 @@ const Admin = () => {
 
         {/* PACKAGE LIST */}
         {isLoading ? (
-          <div className="text-center py-20 text-stone-400 font-bold">Loading...</div>
+          <div className="min-h-[40vh] flex flex-col items-center justify-center gap-4">
+            <Loader2 className="w-12 h-12 text-nature-600 animate-spin" />
+            <p className="text-stone-400 font-bold uppercase tracking-widest text-xs">Fetching Packages...</p>
+          </div>
         ) : (
           <div className="space-y-4">
             {packages.map(pkg => (
@@ -369,7 +372,7 @@ const Admin = () => {
                       <label className="block text-sm font-bold text-stone-700 mb-2">Package Title</label>
                       <input 
                         className="w-full bg-stone-50 border-2 border-stone-100 rounded-xl p-4 focus:border-nature-500 focus:bg-white outline-none transition-all font-bold text-lg" 
-                        value={currentPkg.title} 
+                        value={currentPkg.title || ''} 
                         onChange={e => setCurrentPkg({...currentPkg, title: e.target.value})} 
                         placeholder="e.g. Lake Hora Easy Day Out"
                         required
@@ -380,7 +383,7 @@ const Admin = () => {
                       <label className="block text-sm font-bold text-stone-700 mb-2">Short Description <span className="text-stone-400 font-normal">(Shown on card)</span></label>
                       <input 
                         className="w-full bg-stone-50 border-2 border-stone-100 rounded-xl p-4 focus:border-nature-500 focus:bg-white outline-none transition-all" 
-                        value={currentPkg.description} 
+                        value={currentPkg.description || ''} 
                         onChange={e => setCurrentPkg({...currentPkg, description: e.target.value})} 
                         placeholder="1-2 lines summary..."
                         required
@@ -397,7 +400,7 @@ const Admin = () => {
                       <label className="block text-sm font-bold text-stone-700 mb-2">Full Description</label>
                       <textarea 
                         className="w-full bg-stone-50 border-2 border-stone-100 rounded-xl p-4 focus:border-nature-500 focus:bg-white outline-none transition-all resize-none min-h-[120px]" 
-                        value={currentPkg.full_description} 
+                        value={currentPkg.full_description || ''} 
                         onChange={e => setCurrentPkg({...currentPkg, full_description: e.target.value})} 
                         placeholder="Explain the experience..."
                         rows={5}
@@ -518,7 +521,7 @@ const Admin = () => {
                        <div className="relative">
                           <input 
                             type="checkbox" 
-                            checked={currentPkg.is_active} 
+                            checked={!!currentPkg.is_active} 
                             onChange={e => setCurrentPkg({...currentPkg, is_active: e.target.checked})}
                             className="sr-only peer"
                           />
