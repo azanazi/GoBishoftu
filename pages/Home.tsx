@@ -310,7 +310,7 @@ const Home = () => {
                          </div>
                      </div>
 
-                     <button className="relative overflow-hidden rounded-[2.5rem] bg-white border-4 border-transparent px-8 py-4 md:px-14 md:py-6 text-lg md:text-xl font-black text-stone-900 shadow-[0_20px_40px_-10px_rgba(0,0,0,0.3)] transition-all duration-300 hover:scale-[1.03] hover:-translate-y-1 active:scale-95 active:translate-y-1 ring-4 ring-white/30 hover:ring-white/50">
+                     <button className="relative overflow-hidden rounded-[2.5rem] bg-white border-4 border-transparent px-8 py-4 md:px-14 md:py-6 text-sm md:text-xl font-black text-stone-900 shadow-[0_20px_40px_-10px_rgba(0,0,0,0.3)] transition-all duration-300 hover:scale-[1.03] hover:-translate-y-1 active:scale-95 active:translate-y-1 ring-4 ring-white/30 hover:ring-white/50">
                         
                         {/* Background Fill Animation */}
                         <div className="absolute inset-0 bg-stone-900 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)]"></div>
@@ -320,13 +320,13 @@ const Home = () => {
                             
                             {/* Idle Text */}
                             <span className="absolute flex items-center gap-3 transition-all duration-500 group-hover/btn:-translate-y-[150%] group-hover/btn:opacity-0 group-hover/btn:rotate-3">
-                                <span className="text-2xl md:text-3xl">📦</span>
+                                <span className="text-xl md:text-3xl">📦</span>
                                 <span>{t.homeCta.btn}</span>
                             </span>
 
                             {/* Hover Text */}
                             <span className="absolute flex items-center gap-3 translate-y-[150%] opacity-0 transition-all duration-500 group-hover/btn:translate-y-0 group-hover/btn:opacity-100 text-white">
-                                <span className="text-2xl md:text-3xl animate-[spin_1.5s_linear_infinite]">⭐</span>
+                                <span className="text-xl md:text-3xl animate-[spin_1.5s_linear_infinite]">⭐</span>
                                 <span className="uppercase tracking-wider text-base md:text-lg">{t.homeCta.btnHover}</span>
                             </span>
 
