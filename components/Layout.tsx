@@ -183,21 +183,23 @@ const Navbar = () => {
                       {language === 'en' ? 'አማ' : 'EN'}
                   </button>
 
-                  {/* Fun Header CTA Button */}
+                  {/* Fun Header CTA Button - Updated */}
                   <a 
                     href={TELEGRAM_LINK}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group relative overflow-hidden rounded-2xl bg-stone-900 px-6 py-3 text-white shadow-xl transition-all duration-300 hover:bg-stone-800 hover:shadow-2xl hover:-translate-y-0.5 active:translate-y-0"
+                    className="group relative flex h-[42px] min-w-[160px] items-center justify-center overflow-hidden rounded-2xl bg-stone-900 px-6 text-white shadow-xl transition-all duration-300 hover:bg-[#0088cc] hover:shadow-2xl hover:shadow-[#0088cc]/30 hover:-translate-y-1 hover:rotate-1 active:scale-95"
                   >
-                      {/* Plane Animation */}
-                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 pointer-events-none">
-                          <Send size={18} className="animate-[float_1s_ease-in-out_infinite] text-nature-400" />
-                      </div>
-
-                      <div className="flex items-center gap-2 group-hover:opacity-0 transition-opacity duration-200">
+                      {/* State 1: Default Text */}
+                      <div className="absolute flex items-center gap-2 transition-all duration-300 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)] group-hover:-translate-y-[200%] group-hover:skew-x-12">
                           <span className="font-bold text-xs uppercase tracking-wide">{t.nav.join}</span>
                           <Send size={14} className="text-stone-400" />
+                      </div>
+
+                      {/* State 2: Funny/Modern Text */}
+                      <div className="absolute flex items-center gap-2 translate-y-[200%] skew-x-12 transition-all duration-300 ease-[cubic-bezier(0.68,-0.55,0.265,1.55)] group-hover:translate-y-0 group-hover:skew-x-0">
+                          <span className="text-base animate-[wiggle_1s_ease-in-out_infinite]">👻</span>
+                          <span className="font-black text-[10px] uppercase tracking-widest whitespace-nowrap">We Reply Fast!</span>
                       </div>
                   </a>
                 </div>
