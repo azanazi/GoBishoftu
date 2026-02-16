@@ -74,13 +74,13 @@ const Home = () => {
                     <div className="relative transform transition-transform duration-700 hover:scale-[1.02] hover:-rotate-1 cursor-default group">
                         
                         {/* Shadow Layer for Depth - ADDED PR-8 */}
-                        <span className="absolute inset-0 text-[6rem] md:text-[10rem] lg:text-[13rem] font-serif font-black italic tracking-tighter text-stone-900/30 blur-sm transform translate-y-4 select-none pr-8">
+                        <span className="absolute inset-0 text-[4rem] sm:text-[6rem] md:text-[10rem] lg:text-[13rem] font-serif font-black italic tracking-tighter text-stone-900/30 blur-sm transform translate-y-4 select-none pr-8">
                             {t.hero.line2}
                         </span>
 
                         {/* Main Text Layer - Gradient & Stroke - ADDED PR-8 */}
                         <span 
-                            className="relative block text-[6rem] md:text-[10rem] lg:text-[13rem] font-serif font-black italic tracking-tighter text-transparent bg-clip-text drop-shadow-[0_15px_15px_rgba(0,0,0,0.3)] select-none z-10 pr-8"
+                            className="relative block text-[4rem] sm:text-[6rem] md:text-[10rem] lg:text-[13rem] font-serif font-black italic tracking-tighter text-transparent bg-clip-text drop-shadow-[0_15px_15px_rgba(0,0,0,0.3)] select-none z-10 pr-8"
                             style={{ 
                                 backgroundImage: 'linear-gradient(180deg, #ffffff 10%, #dcfce7 60%, #86efac 100%)',
                                 WebkitTextStroke: '2px rgba(255, 255, 255, 0.1)'
@@ -126,7 +126,7 @@ const Home = () => {
             {/* Button Container */}
             <div className="animate-fade-up opacity-0 relative z-30" style={{ animationDelay: '1s' }}>
               <Link to="/packages">
-                <button className="group relative inline-flex items-center justify-center px-8 py-4 md:px-14 md:py-6 bg-white rounded-full text-lg md:text-xl font-black text-stone-900 shadow-[0_0_50px_-10px_rgba(255,255,255,0.3)] hover:shadow-[0_0_80px_-10px_rgba(22,163,74,0.6)] transition-all duration-500 hover:-translate-y-2 hover:scale-110 active:scale-95 overflow-hidden ring-8 ring-white/10 hover:ring-nature-400/40 backdrop-blur-sm">
+                <button className="group relative inline-flex items-center justify-center px-8 py-4 md:px-14 md:py-6 bg-white rounded-full text-sm md:text-xl font-black text-stone-900 shadow-[0_0_50px_-10px_rgba(255,255,255,0.3)] hover:shadow-[0_0_80px_-10px_rgba(22,163,74,0.6)] transition-all duration-500 hover:-translate-y-2 hover:scale-110 active:scale-95 overflow-hidden ring-8 ring-white/10 hover:ring-nature-400/40 backdrop-blur-sm">
                   
                   {/* Liquid Background Fill */}
                   <div className="absolute inset-0 bg-gradient-to-tr from-nature-700 via-nature-500 to-nature-400 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.23,1,0.32,1)]"></div>
@@ -138,13 +138,13 @@ const Home = () => {
                   <span className="relative z-20 flex flex-col items-center h-[40px] md:h-[48px] overflow-hidden w-full min-w-[200px] md:min-w-[280px]">
                       {/* State 1: Default */}
                       <span className="absolute top-0 left-0 w-full h-full flex items-center justify-center gap-3 transition-all duration-500 group-hover:-translate-y-[150%] group-hover:opacity-0 group-hover:scale-50">
-                         <span className="text-2xl md:text-3xl transform group-hover:rotate-[360deg] transition-transform duration-700">👀</span>
+                         <span className="text-xl md:text-3xl transform group-hover:rotate-[360deg] transition-transform duration-700">👀</span>
                          <span className="tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-stone-900 to-stone-600 pb-1">{t.hero.cta}</span>
                       </span>
                       
                       {/* State 2: Hover */}
                       <span className="absolute top-0 left-0 w-full h-full flex items-center justify-center gap-3 translate-y-[150%] transition-all duration-500 group-hover:translate-y-0 scale-150 group-hover:scale-100 text-white drop-shadow-md">
-                         <span className="text-2xl md:text-3xl animate-[spin_3s_linear_infinite]">✨</span>
+                         <span className="text-xl md:text-3xl animate-[spin_3s_linear_infinite]">✨</span>
                          <span className="tracking-widest uppercase text-base md:text-lg">{t.hero.ctaHover}</span>
                       </span>
                   </span>
